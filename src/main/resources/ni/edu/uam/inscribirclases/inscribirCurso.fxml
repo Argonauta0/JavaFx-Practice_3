@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="674.0" prefWidth="675.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="228.0" layoutY="28.0" text="Inscripcion a Curso Extracurricular">
+         <font>
+            <Font name="CBArialLink" size="24.0" />
+         </font></Label>
+      <Label layoutX="248.0" layoutY="74.0" text="Complete la informacion para registrar al estudiante">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font></Label>
+      <Label layoutX="48.0" layoutY="115.0" text="Nombre del estudiante:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="48.0" layoutY="161.0" text="Curso:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextField fx:id="txtNombre" layoutX="213.0" layoutY="112.0" prefHeight="26.0" prefWidth="354.0" promptText="Ingrese el nombre" />
+      <ComboBox fx:id="CBCurso" layoutX="213.0" layoutY="158.0" prefHeight="26.0" prefWidth="354.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value=" Analisis de datos" />
+               <String fx:value=" Fundamentos de Procesamiento de Datos" />
+               <String fx:value=" Python para analisis estadistico" />
+               <String fx:value=" Estadistica I" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Label layoutX="48.0" layoutY="212.0" text="Temas de interes:">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="48.0" layoutY="252.0" text="Puede seleccionar uno o varios temas.">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <ListView fx:id="listTemas" layoutX="48.0" layoutY="292.0" prefHeight="90.0" prefWidth="583.0">
+      <items>
+         <FXCollections fx:factory="observableArrayList">
+            <String fx:value=" Analisis de datos" />
+            <String fx:value=" Fundamentos de Procesamiento de Datos" />
+            <String fx:value=" Python para analisis estadistico" />
+            <String fx:value=" Estadistica I" />
+         </FXCollections>
+      </items>
+      </ListView>
+      <Label layoutX="51.0" layoutY="402.0" text="Servicios adicionales:">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font></Label>
+      <CheckBox fx:id="chkMaterial" layoutX="62.0" layoutY="455.0" mnemonicParsing="false" text="Incluir material digital" />
+      <CheckBox fx:id="chkCorreo" layoutX="62.0" layoutY="480.0" mnemonicParsing="false" text="Recebir notificaciones por correo" />
+      <CheckBox fx:id="chkCertificado" layoutX="62.0" layoutY="431.0" mnemonicParsing="false" text="Solicitar certificado" />
+      <Label layoutX="52.0" layoutY="510.0" text="Modalidad:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+
+      <RadioButton fx:id="chkPresencial" layoutX="74.0" layoutY="534.0" mnemonicParsing="false" text="Presencial">
+                  <toggleGroup>
+                     <ToggleGroup fx:id="modalidad" />
+                  </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="chkVirtual" layoutX="170.0" layoutY="534.0" mnemonicParsing="false" text="Virtual" toggleGroup="$modalidad" />
+      <RadioButton fx:id="chkHibrida" layoutX="253.0" layoutY="534.0" mnemonicParsing="false" text="Hibrida" toggleGroup="$modalidad" />
+
+      <Button fx:id="btnRegistrar" layoutX="286.0" layoutY="562.0" mnemonicParsing="false" text="Registrar inscripcion" />
+      <TextArea fx:id="txtResultado" layoutX="45.0" layoutY="603.0" prefHeight="48.0" prefWidth="583.0" />
+   </children>
+</AnchorPane>
